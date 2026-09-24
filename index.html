@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e4e5e2">
+<title>Human | Flawed Machine — IX</title><meta name="description" content="IX’s digital self-portrait. Drag metal nodes, bend red and black wires, and move pieces of tape.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23e4e5e2'/%3E%3Ccircle cx='32' cy='23' r='13' fill='none' stroke='%23434445' stroke-width='4'/%3E%3Cpath d='M32 36v24' stroke='%23d32424' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="machine.css?v=20260924-minimal"><script src="machine-data.js?v=20260924-segments" defer></script><script src="machine.js?v=20260924-english" defer></script>
+</head>
+<body>
+<div class="layers" role="group" aria-label="Show or hide material layers">
+<button type="button" class="layer" data-layer="nodes" aria-pressed="true" aria-controls="nodes-layer"><span class="material-icon ring-icon" aria-hidden="true"></span><span>Nodes</span><span class="layer-count" id="node-count">51</span></button>
+<button type="button" class="layer" data-layer="wires" aria-pressed="true" aria-controls="wires-layer"><span class="material-icon wire-icon" aria-hidden="true"></span><span>Wires</span><span class="layer-count" id="wire-count">34</span></button>
+<button type="button" class="layer" data-layer="tapes" aria-pressed="true" aria-controls="tapes-layer"><span class="material-icon tape-icon" aria-hidden="true"></span><span>Tape</span><span class="layer-count" id="tape-count">10</span></button>
+</div>
+<main id="artwork" aria-label="Interactive digital self-portrait"><div class="artboard" id="artboard">
+<svg id="machine" role="group" tabindex="-1" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg" aria-label="A self-portrait made of metal rings, red and black wires, and tape" aria-describedby="interaction-help">
+<defs>
+<linearGradient id="ring-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fafbfc"/><stop offset=".17" stop-color="#62696c"/><stop offset=".31" stop-color="#eef0f0"/><stop offset=".49" stop-color="#51585b"/><stop offset=".64" stop-color="#c5cacc"/><stop offset=".83" stop-color="#f6f8f8"/><stop offset="1" stop-color="#687174"/></linearGradient>
+<linearGradient id="ring-inner" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#2e373b"/><stop offset=".48" stop-color="#edf0ed"/><stop offset="1" stop-color="#596165"/></linearGradient>
+<linearGradient id="tape-paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffef5" stop-opacity=".98"/><stop offset=".43" stop-color="#f6f4e8" stop-opacity=".88"/><stop offset="1" stop-color="#e1dfd3" stop-opacity=".93"/></linearGradient>
+<filter id="material-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="1.5" dy="4" stdDeviation="2.3" flood-color="#273239" flood-opacity=".34"/></filter>
+<filter id="tape-shadow" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="1" dy="4" stdDeviation="2" flood-color="#252e31" flood-opacity=".19"/></filter>
+</defs>
+<g id="features-layer" aria-hidden="true"></g><g id="wires-layer" aria-label="Bendable wires"></g><g id="nodes-layer" aria-label="Movable metal nodes"></g><g id="tapes-layer" aria-label="Movable tape"></g>
+
+</svg>
+</div></main>
+<p id="interaction-help" class="sr-only">Drag metal nodes, wires, or tape. Press Tab to select a material and use the arrow keys to move it. With tape selected, use the bracket keys to rotate it or Delete to remove it. Press Ctrl or Command + Z to undo.</p>
+<p id="status" class="sr-only" role="status" aria-live="polite"></p>
+</body></html>
